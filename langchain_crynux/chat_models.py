@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Dict, Type, Union
 
 from langchain_openai import ChatOpenAI
 
@@ -29,3 +29,15 @@ class ChatCrynux(ChatOpenAI):
         kwargs["vram_limit"] = vram_limit
 
         super().__init__(*args, **kwargs)
+
+    def with_structured_output(
+        self,
+        schema: Union[Dict, Type[Any]],
+        *,
+        method: str = "function_calling",
+        include_raw: bool = False,
+        **kwargs: Any,
+    ) -> Any:
+        return super().with_structured_output(
+            schema, method=method, include_raw=include_raw, **kwargs
+        )
