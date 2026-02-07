@@ -1,7 +1,7 @@
 # langchain-crynux
 
-![PyPI - Version](https://img.shields.io/pypi/v/langchain-crynux?style=flat-square)
-
+[![](https://dcbadge.limes.pink/api/server/https://discord.gg/zmU9GRwU6f)](https://discord.gg/zmU9GRwU6f)
+![PyPI - Version](https://img.shields.io/pypi/v/langchain-crynux?style=for-the-badge)
 [![Static Badge](https://img.shields.io/badge/Gitbook-Documentation-blue?style=for-the-badge&logo=gitbook)](https://docs.crynux.io/application-development/how-to-run-llm-using-crynux-network)
 
 Drop-in replacement for `langchain-openai` ChatOpenAI that lets existing OpenAI-compatible LLM code run on the Crynux network without changes.
