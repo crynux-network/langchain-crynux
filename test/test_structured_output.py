@@ -19,7 +19,7 @@ def test_structured_output():
     print("Testing ChatCrynux structured output...")
     chat = ChatCrynux(
         base_url=os.environ.get("CRYNUX_BASE_URL", "https://bridge.crynux-as.xyz/v1/llm"),
-        model="Qwen/Qwen-2.5-7B-Instruct",
+        model=os.environ.get("CRYNUX_MODEL", "Qwen/Qwen2.5-7B-Instruct"),
         temperature=0,
         timeout=60
     )
