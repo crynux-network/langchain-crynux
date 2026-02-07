@@ -2,6 +2,8 @@
 
 ![PyPI - Version](https://img.shields.io/pypi/v/langchain-crynux?style=flat-square)
 
+[![Static Badge](https://img.shields.io/badge/Gitbook-Documentation-blue?style=for-the-badge&logo=gitbook)](https://docs.crynux.io/application-development/how-to-run-llm-using-crynux-network)
+
 Drop-in replacement for `langchain-openai` ChatOpenAI that lets existing OpenAI-compatible LLM code run on the Crynux network without changes.
 
 ## Installation
@@ -23,7 +25,7 @@ os.environ["OPENAI_API_KEY"] = "your-api-key"
 
 chat = ChatCrynux(
     base_url="https://bridge.crynux-as.xyz/v1/llm",
-    model="Qwen/Qwen-2.5-7B-Instruct",
+    model="Qwen/Qwen2.5-7B-Instruct",
     vram_limit=24,
     timeout=60,
     # Option 2: pass api_key directly
@@ -58,7 +60,7 @@ class Weather(BaseModel):
     condition: Optional[str] = Field(description="The weather condition (e.g., sunny, rainy)")
 
 chat = ChatCrynux(
-    model="Qwen/Qwen-2.5-7B-Instruct",
+    model="Qwen/Qwen2.5-7B-Instruct",
     temperature=0
 )
 
